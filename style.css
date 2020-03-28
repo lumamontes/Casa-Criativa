@@ -18,17 +18,9 @@
     body {
     background: #e5e5e5;
     color: #252828;
-
     font-family: 'Montserrat', sans-serif;
-
-
     margin: 0;
 }
-.hide{
-    display: none; 
-}
-
-
 a {
     color: #ff5E84;
     font-weight: bold;
@@ -47,8 +39,7 @@ p, .description {
      #container {
          width: 90%;
          max-width: 980px;
-         margin-left: auto;
-         margin-right: auto;
+       
          margin: 40px auto;
 
          display: flex;
@@ -70,6 +61,7 @@ main {
  #buttons {
      display: flex ;
      justify-content: space-evenly;
+
      margin-bottom: 32px;
 
  }    
@@ -83,13 +75,9 @@ button {
     font-weight: bold;
     line-height: 18px;
     letter-spacing: 0.2px;
-
-    font-weight: bold;
-
+   
     cursor: pointer;
     outline: none;
-
-
 }
 
 button:hover {
@@ -98,15 +86,15 @@ button:hover {
 
 
 button.fat {
-    color: white;
     background: #ff5E84;
+    color: white;
 
     width: 150px;
     height: 40px;
     
     border-radius: 6px;
 
-    box-shadow: 0px 8px 16px rgba(255, 0, 92, 0.16);
+    box-shadow: 0px 8px 16px #FF5E8432
 
 
 }
@@ -126,23 +114,23 @@ button.fat:hover{
 }
 
 footer a {
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 .idea {
     display: flex;
+    background-color: #FFF;
     box-shadow: 0 4px 16px -8px rgba(1, 1, 1, 0.1);
-    background-color: #ffffff;
     border-radius: 8px;
+
     padding: 32px;
+      
     margin-bottom: 32px;
 }
 
 .idea img {
     width: 60px;
     height: 60px;
-  
-
     margin-right: 32px;
 }
 
@@ -168,11 +156,15 @@ ideia description {
     background: #ff5E84;
 
     position: absolute;
+    top: 0;
+
     width: 100vw;
     height: 100vh;
+
     display: flex;
-    align-items: center;
     justify-content: center;
+
+    transition: 400ms;
 }
 
 
@@ -190,12 +182,13 @@ ideia description {
 
 
 #modal form {
-max-width: 800px;
-width: 80%;
+    width: 80%;
+    max-width: 800px;
 
 margin: 0 auto;
 
 display: grid;
+grid-template-columns: 1fr 1fr;
 
 gap: 20px;
  
@@ -209,11 +202,14 @@ gap: 20px;
 }
 
 
-form input, form textarea {
+form input,
+form textarea {
     width: 100%;
 
     padding: 12px;
+
     box-sizing: border-box;
+      
     border-radius: 6px;
 
     border: 1px solid rgba(141, 25, 52, 0.5);
@@ -229,10 +225,13 @@ form label {
     line-height: 32px;
     letter-spacing: 0.8px;
 
-
 }
 
 form a {
+
+    width: 150px;
+    height: 40px;
+
     background-color: #ffffff22;
     color: white;
 
@@ -267,20 +266,25 @@ form button {
     border-radius: 6px;
 
     cursor: pointer;
+
     margin-top: 32px;
+
     grid-column: 2;
+
     justify-self: end;
+
     transition: 400ms;
 
 }
 
-form buttor:hover {
+form button:hover {
     background-color: #0984e3;
     color: white;
     text-decoration: none;
 }
 
 #modal.hide {
-    display: none; 
+    opacity: 0;
+    visibility: hidden; 
     
 }
