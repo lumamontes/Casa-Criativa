@@ -2,74 +2,148 @@
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>Casa de Ideias</title>
-
-    <style>
-        body {
-            background: #e5e5e5;
-            color: #252828;
-
-            text-align: center;
-        }
-
-        button {
-
-
-            color: #ff5E84;
-
-            border: none;
-
-            font-weight: bold;
-            background: none;
-
-        }
-
-        .fat {
-            color: white;
-            background: #ff5E84
-        }
-
-        #footer a {
-            color: #252828;
-            text-decoration: none;
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Casa de Ideias</title>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,700,900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <h1>Casa Criativa</h1>
-    <img src="logo2.png" alt="Logo casa criativa">
+<div id="container">
+<section id="intro">
 
-    <p>
-        Ficar em casa em períodos longos, não deve ser nada fácil.
-    </p>
-    <p>
-        Iremos catalogar ideias, brincadeiras, jogos, filmes, livros, cursos, dicas e tudo que for necessário para
-        tornar esse momento mais interessante.
-    </p>
-    <p>
-        Comece clicando em ver ideias para ver as ideias cadastradas e contribua adicioando a sua ideia.
-    </p>
+    <header>
 
-    <button> + Adicionar idea </button>
-    <button class="fat"> Ver ideias </button>
+        <img src="logo2.png" alt="Logo casa criativa">
 
-    <p id="footer"> Com s2 <a href="https://github.com/lumamontes">Luma</p>
+    </header>
 
-    <script>
-        document
-            .querySelector("button.fat")
-            .addEventListener("click", function(){
-                document
-                .querySelector("#footer")
-                .classList
-                .toggle("hide")
-            })
+    <main>
+        <p>
+            Ficar em casa em períodos longos, não deve ser nada fácil.
+        </p>
+        <p>
+            Iremos catalogar <b>ideias, brincadeiras, jogos, filmes, livros, cursos, dicas</b> e tudo que for
+            necessário para
+            tornar esse momento mais interessante.
+        </p>
+        <p>
+            Comece clicando em ver ideias para ver as ideias cadastradas e contribua adicioando a sua ideia.
+        </p>
 
-    </script>
+    </main>
+
+    <section id="buttons">
+        <button onclick="onOff()"> + Adicionar idea </button>
+        <button class="fat"> Ver ideias </button>
+    </section>
 
 
+    <footer>
+        Com s2 <a href="https://github.com/lumamontes"> Luma </a>
+    </footer>
+
+</section>
+
+<section id="last-ideas">
+    
+<div class="idea">
+    <img src="https://image.flaticon.com/icons/svg/2729/2729007.svg" 
+    alt="Imagem de Curso de Programação">
+
+    <div class="content">
+        <h3>Cursos de Programação</h3>
+        <p>Estudo</p>
+        <div class="description">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim eius deleniti harum, doloremque optio a nostrum quis recusandae cupiditate explicabo possimus ipsum eaque reiciendis itaque numquam accusamus esse placeat commodi?
+        </div>
+        <a href="#">Ir para a Ideia</a>
+
+    </div>
+
+</div>
+<div class="idea">
+    <img src="https://image.flaticon.com/icons/svg/2729/2729005.svg" 
+    alt="Imagem de Exercícios em casa">
+
+    <div class="content">
+        <h3>Exercícios</h3>
+        <p>Saúde</p>
+        <div class="description">
+
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim eius deleniti harum, doloremque optio a nostrum quis recusandae cupiditate explicabo possimus ipsum eaque reiciendis itaque numquam accusamus esse placeat commodi?
+        </div>
+        <a href="#">Ir para a Ideia</a>
+
+    </div>
+
+</div>
+
+<div class="idea">
+ <img src="https://image.flaticon.com/icons/svg/2729/2729027.svg" 
+    alt="Imagem de Meditação">
+ <div class="content">
+        <h3>Meditação</h3>
+        <p>Saúde</p>
+        <div class="description">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim eius deleniti harum, doloremque optio a nostrum quis recusandae cupiditate explicabo possimus ipsum eaque reiciendis itaque numquam accusamus esse placeat commodi?
+        </div>
+        <a href="#">Ir para a Ideia</a>
+
+    </div>
+
+</div>
+</section>
+</div>
+
+<!--MODAL-->
+
+<div id="modal">  
+    <div class="content" class="hide ">
+        <h1>Nova Ideia</h1>
+
+        <form action="">
+        
+            <div class="input-wrapper">
+                <label for="title">Título da Ideia</label>
+                <input type="text" name="title">
+            </div>
+        
+        
+            <div class="input-wrapper">
+                <label for="categorie">Categoria</label>
+                <input type="text" name="categorie">
+            </div>
+        
+        
+            <div class="input-wrapper">
+                <label for="image">Link da Imagem</label>
+                <input type="url" name="image">
+            </div>
+        
+        
+            <div class="input-wrapper">
+                <label for="description">Digite uma descrição para essa</label>
+                <textarea name="description" cols="30" rows="10">
+
+                </textarea>
+            </div>
+        
+            <div class="input-wrapper">
+                <label for="link">Link da ideia</label>
+                <input type="url" name="link">
+            </div>
+        
+        
+            <a href="#"onclick="onOff">Voltar</a>
+            <button>Salvar</button>                      
+             
+        </form>
+    </div>
+</div>
+
+
+<script src="script.js"></script>
 </body>
 
 
