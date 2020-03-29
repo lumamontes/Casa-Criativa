@@ -13,9 +13,9 @@
 <section id="intro">
 
     <header>
-
-        <img src="logo2.png" alt="Logo casa criativa">
-
+        <a href="index.html">
+            <img src="logo.png" alt="Logo casa criativa">
+        </a>
     </header>
 
     <main>
@@ -35,17 +35,17 @@
 
     <section id="buttons">
         <button onclick="onOff()"> + Adicionar ideia </button>
-        <button class="fat"> Ver ideias </button>
+        <a href="ideias.html" class="button"> Ver ideias </a>
     </section>
 
 
     <footer>
-        Com s2 <a href="https://github.com/lumamontes"> Luma </a>
+        Com s2 <a href="https://github.com/lumamontes"target ="_blank"> Luma </a>
     </footer>
 
 </section>
 
-<section id="last-ideas">
+<section id="ideias">
     
 <div class="idea">
     <img src="https://image.flaticon.com/icons/svg/2729/2729007.svg" 
@@ -93,13 +93,14 @@
     </div>
 
 </div>
+
 </section>
 </div>
 
 <!--MODAL-->
 
-<div id="modal">  
-    <div class="content" class="hide">
+<div id="modal" class="hide" >  
+    <div class="content">
         <h1>Nova Ideia</h1>
 
         <form action="">
@@ -111,8 +112,8 @@
         
         
             <div class="input-wrapper">
-                <label for="categorie">Categoria</label>
-                <input type="text" name="categorie">
+                <label for="category">Categoria</label>
+                <input type="text" name="category">
             </div>
         
         
@@ -123,10 +124,8 @@
         
         
             <div class="input-wrapper">
-                <label for="description">Digite uma descrição para essa</label>
-                <textarea name="description" cols="30" rows="10">
-
-                </textarea>
+                <label for="description">Digite uma descrição para essa ideia</label>
+                <textarea name="description" cols="30" rows="10"></textarea>
             </div>
         
             <div class="input-wrapper">
