@@ -16,6 +16,24 @@ document
   .toggle("addScroll")  
 }
 
+function checkFields (event) {
+  console.log(event.target["title"].value)
+  const valuesToCheck=[
+    "title",
+    "image",
+    "category",
+    "description",
+    "link",
+  ]
+
+  for (let value of valueToCheck) {
+    console.log(event.target[value].value)
+  }
+}
+
+
+
+
 
 
 
